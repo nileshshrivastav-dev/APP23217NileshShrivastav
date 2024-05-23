@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+#n{
+height:35px;
+width:350px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<table border="1" style="border-collapse:collapse" id="n">
+<tr id="h" onclick="demo1(this)">
+<th>Name</th>
+<th>College</th>
+<th>City</th>
+</tr>
+<tr id="ram" onclick="demo2()">
+<td>Ram</td>
+<td>IEt Lucknow</td>
+<td>Lucknow</td>
+</tr>
+<tr id="mohan" onclick="demo3()">
+<td>Mohan</td>
+<td>FGIET</td>
+<td>RAEBARELI</td>
+</tr>
+<tr id="sohan" onclick="demo4()">
+<td>Sohan</td>
+<td>MMMUT</td>
+<td>GORAKHPUR</td>
+</tr>
+</table>
+<script>
+var h=document.querySelector("#h")
+var r=document.querySelector("#ram")
+var m=document.querySelector("#mohan")
+var s=document.querySelector("#sohan")
+function demo1()
+{
+confirm("Are you sure to hide ?")
+h.style.display="block"
+r.style.display="none"
+m.style.display="none"
+s.style.display="none"
+}
+function demo2()
+{
+confirm("Are you sure to hide ?")
+h.style.display="none"
+r.style.display="block"
+m.style.display="none"
+s.style.display="none"
+}
+function demo3()
+{
+confirm("Are you sure to hide ?")
+h.style.display="none"
+r.style.display="none"
+m.style.display="block"
+s.style.display="none"
+}
+function demo4()
+{
+confirm("Are you sure to hide ?")
+h.style.display="none"
+r.style.display="none"
+m.style.display="none"
+s.style.display="block"
+}
+</script>
+</body>
+</html>

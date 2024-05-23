@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+<center>
+<div>
+<h1>Simple Calculator Using JS</h1>
+<span style="color:purple;">Enter First Number :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="txt1" /><br /><br />
+<span style="color:purple;">Enter Second Number :</span>&nbsp;&nbsp;<input type="number" id="txt2" />
+<p style="color:blue;"></p>
+<input type="button" class="a" onclick="demo(this)" value="+" />
+<input type="button" class="a" onclick="demo(this)" value="-" />
+<input type="button" class="a" onclick="demo(this)" value="*" />
+<input type="button" class="a" onclick="demo(this)" value="/" />
+<input type="button" class="a" onclick="demo(this)" value="%" />
+</div>
+</center><br/><center>
+<p style="color:blue;"><h1>*Result*</h1></p>
+<input type="text" id="result" disabled/></center>
+<br />
+<hr/>
+<script>
+var demo=(x)=>{
+   var num1 = parseFloat(document.querySelector("#txt1").value);
+   var num2 = parseFloat(document.querySelector("#txt2").value);
+   var result = "";
+   if (x.value == '+')
+   result = num1 + num2;
+   else if (x.value == '-')
+   result = num1 - num2;
+   else if (x.value == '*')
+   result = num1 * num2;
+   else if (x.value == '/')
+   result = num1 / num2;
+   else if (x.value == '%')
+   result = num1 % num2;
+   document.getElementById("result").value = result;
+    }
+</script>
+</body>
+</html>

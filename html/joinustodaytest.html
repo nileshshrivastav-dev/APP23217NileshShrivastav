@@ -1,0 +1,81 @@
+<html>
+<head>
+<link href="../css/bootstrap.css" rel="stylesheet"/>
+<link href="../css/all.css" rel="stylesheet"/>
+<style>
+.b{
+  background:blue;
+}
+#signupform{
+display:none;
+}
+</style>
+</head>
+<body class="b">
+<div class="container">
+<div class="row">
+<div class="col-sm-4 bg-light mx-auto p-4 m-5">
+<div id="loginform" value="log">
+<div class="text-center">
+<b class="fs-2">Welcome back!</b><br/>
+<span>Log in access your account</span>
+</div><br/>
+<form>
+<input type="email" id="email" class="form-control" placeholder="Email Address"/><br/>
+<input type="password" id="pass" class="form-control" placeholder="Password"/><br/>
+<input type="button" value="Login" onclick="log()" class="form-control b mt-2" style="color:white"/>
+</form>
+<span class="ms-5">Not a Member?<a href="#" style="text-decoration:none" onclick="demo1()">Signup Here</a></span>
+</div>
+<div id="signupform" value="sign">
+<div class="text-center">
+<b class="fs-2">Join us today!</b><br/>
+<span>Sign up now to become a member</span>
+</div><br/>
+<form>
+<input type="text" class="form-control" placeholder="Enter Name"/><br/>
+<input type="email" class="form-control" id="em" placeholder="Enter Email"/><br/>
+<input type="password" class="form-control" id="pa" placeholder="Enter Password"/><br/>
+<input type="button" value="Login" class="form-control b mt-2" style="color:white"/>
+</form>
+<span class="ms-5">Already a member?<a href="#" onclick="demo2()" style="text-decoration:none">Login Here</a></span>
+</div>
+</div>
+</div>
+</div>
+<script>
+var rform=document.querySelector("#signupform")
+var lform=document.querySelector("#loginform")
+var x=document.querySelector("#email").value
+var a=document.querySelector("#em").value
+var y=document.querySelector("#pass").value
+var b=document.querySelector("#pa").value
+function demo1()
+{
+lform.style.display="none"
+rform.style.display="block"
+}
+function demo2()
+{
+
+lform.style.display="block"
+rform.style.display="none"
+}
+function log()
+{
+if(x!==a)
+{
+  alert("Not Matched Email")
+}
+if(y!==b)
+{
+  alert("Not Matched Password")
+}
+else
+{
+  alert("login Successfully")
+}
+}
+</script>
+</body>
+</html>

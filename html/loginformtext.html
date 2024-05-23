@@ -1,0 +1,63 @@
+<html>
+<head>
+<link href="../css/bootstrap.css" rel="stylesheet"/>
+<link href="../css/all.css" rel="stylesheet"/>
+<style>
+.b{
+  background:blue;
+}
+</style>
+</head>
+<body class="b">
+<div class="container">
+<div class="row">
+<div class="col-sm-4 bg-light mx-auto p-4 m-5">
+<h2 class="text-center">Login Form</h2><br/>
+<form>
+<div class="input-group">
+<span class="input-group-text text-bg-light"><i class="fa-solid fa-envelope"></i></span>
+<input type="email" id="email" class="form-control" placeholder="Email Address"/><br/>
+</div>
+<p id="p1"></p>
+<div class="input-group">
+<span class="input-group-text text-bg-light"><i class="fa-solid fa-lock"></i></span>
+<input type="password" id="pass" class="form-control" placeholder="Password"/><br/>
+</div>
+<p id="p2"></p>
+<a href="#" style="text-decoration:none">Forgot Password?</a>
+<input type="button" value="Login" onclick="demo()" class="form-control b mt-4" style="color:white"/>
+</form>
+<span class="ms-5">Not yet Member?<a href="#" style="text-decoration:none">Signup now</a></span>
+</div>
+</div>
+</div>
+<script>
+function demo()
+{
+  var x=document.querySelector("#email")
+  var t=x.value
+  var y=document.querySelector("#pass")
+  var z=x.value
+  var p=document.querySelector("#p1")
+  var n=document.querySelector("#p2")
+  if(t=="")
+  {
+    p.innerText="Email can't be blank"
+	p.style.color="red"
+	x.style.border="1px solid red"
+  }
+  if(z=="")
+  {
+    n.innerText="Password can't be blank"
+	n.style.color="red"
+	y.style.border="1px solid red"
+  }
+  else
+  {
+    alert("Login Succesfully..")
+  }
+  
+}
+</script>
+</body>
+</html>
